@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelsStoreContainer" CdmEntityContainer="WaitTimesContext">
+    <EntitySetMapping Name="Tables">
+      <EntityTypeMapping TypeName="Models.Table">
+        <MappingFragment StoreEntitySet="Table">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="no_of_patients" ColumnName="no_of_patients" />
+          <ScalarProperty Name="no_of_doctors" ColumnName="no_of_doctors" />
+          <ScalarProperty Name="avg_appointment_time" ColumnName="avg_appointment_time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblWaitTimes">
+      <EntityTypeMapping TypeName="Models.tblWaitTime">
+        <MappingFragment StoreEntitySet="tblWaitTime">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="no_of_patients" ColumnName="no_of_patients" />
+          <ScalarProperty Name="no_of_doctors" ColumnName="no_of_doctors" />
+          <ScalarProperty Name="avg_appointment_time" ColumnName="avg_appointment_time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

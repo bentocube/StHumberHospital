@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "DHTMLX Scheduler .NET";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*View for appointment scheduling calendar*@ 
+
+<h2>Book an Appointment Calendar</h2>
+<div class="scheduler_container">
+    @Html.Raw(Model.Render())
+</div>
+
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/dhtmlxScheduler/dhtmlxscheduler.js"></script>

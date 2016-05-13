@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - St. Humber Hospital - Toronto</title>
+    <link rel="stylesheet" href="~/Content/index.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <div class="row">
+        <p>This is a Fictional Website - A project made by students of the Web Development Program at Humber College</p>
+    </div>
+    <div id="main-wrapper">
+        <header id="header">
+            <section id="informationBar">
+                <div class="wrapper">
+                    <div class="row">
+                        <div class="col-7">
+                            <img id="logo" alt="St Humber Hospital Logo" src="images/logo.png" />
+                            <div class="row mobileOnly">
+                                <p>(416) 530  6000</p>
+                            </div>
+                            <div class="row mobileOnly">
+                                <p>30 The Queensway, Toronto, ON, M6R 1B5 - <a href="#">Map</a></p>
+                            </div>
+                        </div>
+                        <div id="donateButtonBar" class="col-5">
+                            <div class="row">
+                                <div class="col-9">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <a href="#">Donate Now</a>
+                                        </div>
+                                        <div class="col-5">
+                                            <a href="#">Log In</a>
+                                        </div>
+                                    </div>
+                                    <div id="searchBox" class="row">
+                                        <input type="text" placeholder=" search" />
+                                        <button id="searchBtn">
+                                            <span class="fa fa-search" aria-hidden="true"></span>
+                                        </button>
+                                    </div>
+                                    <div class="row">
+                                        <p>(416) 530  6000</p>
+                                    </div>
+                                    <div class="row">
+                                        <p>30 The Queensway, Toronto, ON, M6R 1B5 - <a href="#">Map</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <p>E.R. Wait Time:</p>
+                                @{Html.Action("WaitTimesCalculator", "WaitTimes");}
+                                @TempData["WaitTime"]
+                                <p>Mins</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <nav id="main-navigation">
+                <div class="wrapper">
+                    <ul id="main-nav">
+                        <li><a href="#">Home</a></li>
+                        <li>|</li>
+                        <li><a href="#">Patients &amp; Visitors</a></li>
+                        <li>|</li>
+                        <li><a href="#">Programs &amp; Services</a></li>
+                        <li>|</li>
+                        <li><a href="#">Education</a></li>
+                        <li>|</li>
+                        <li><a href="#">Community</a></li>
+                        <li>|</li>
+                        <li><a href="#">Careers</a></li>
+                        <li>|</li>
+                        <li><a href="#">About Us</a></li>
+                        <li>|</li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div id="respMenu" class="row">
+                <div id="toggle-menu" class="col-12">
+                    <div class="row">
+                        <span class="fa fa-bars fa-2x" aria-hidden="true"> Menu</span>
+                    </div>
+
+                </div>
+            </div>
+            <nav id="mini-nav" class="toggleHide">
+                <h2 class="always-hidden">Responsive Navigation</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Patients &amp; Visitors</a></li>
+                    <li><a href="#">Programs &amp; Services</a></li>
+                    <li><a href="#">Education</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+          
+            <!--needed for calendar -->
+            
+            <head>
+                <meta charset="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>@ViewBag.Title - My ASP.NET Application</title>
+                <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+                <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+            </head>
+           
+               
+
+                <div class="container body-content">
+                    @RenderBody()
+                    <hr />
+                    <footer>
+                        <p>© @DateTime.Now.Year - My ASP.NET Application</p>
+                    </footer>
+                </div>
+
+                <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+                <script src="~/Scripts/bootstrap.min.js"></script>
+          <!--end needed for calendar-->
+
+        <footer id="footer">
+            <section id="footer-links">
+                <div class="wrapper">
+                    <div class="row">
+                        <nav id="footer-nav" class="col-9">
+                            <ul>
+                                <li><a href="#">Contact Us</a></li>
+                                <li>|</li>
+                                <li><a href="#">Terms of Use</a></li>
+                                <li>|</li>
+                                <li><a href="#">Privacy</a></li>
+                                <li>|</li>
+                                <li><a href="#">Website Guide</a></li>
+                                <li>|</li>
+                                <li><a href="#">Accessibility</a></li>
+                            </ul>
+                        </nav>
+                        <div class="col-3">
+                            <input type="text" placeholder=" Newsletter" />
+                            <button id="subscribeBtn">
+                                <span class="fa fa-envelope-o" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="copyrights">
+                <div class="wrapper">
+                    <div class="row">
+                        <p>Copyrights &copy;2016 St. Humber Health Centre</p>
+                    </div>
+                </div>
+            </section>
+        </footer>
+    </div>        
+    <script src="~/Scripts/index.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
